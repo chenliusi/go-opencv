@@ -57,7 +57,7 @@ func LoadHaarClassifierCascade(haar string) *HaarCascade {
 	haarCascade.cascade = C.cvLoadHaarClassifierCascade(C.CString(haar), C.cvSize(1, 1))
 	return haarCascade
 }
-
+/*
 func (this *HaarCascade) DetectObjects(image *IplImage) []*Rect {
 	storage := C.cvCreateMemStorage(C.int(0))
 	seq := C.cvHaarDetectObjects(unsafe.Pointer(image), this.cascade, storage, 1.1, 3, C.CV_HAAR_DO_CANNY_PRUNING, C.cvSize(0, 0), C.cvSize(0, 0))
@@ -72,7 +72,7 @@ func (this *HaarCascade) DetectObjects(image *IplImage) []*Rect {
 	C.cvReleaseMemStorage(&storage_c)
 
 	return faces
-}
+}*/
 
 func (this *HaarCascade) Release() {
 	cascade_c := (*C.CvHaarClassifierCascade)(this.cascade)
