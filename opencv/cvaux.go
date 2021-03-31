@@ -6,9 +6,10 @@ package opencv
 
 //#include "opencv.h"
 import "C"
+/*
 import (
 	"unsafe"
-)
+)*/
 
 /****************************************************************************************\
 *                                  Eigen objects                                         *
